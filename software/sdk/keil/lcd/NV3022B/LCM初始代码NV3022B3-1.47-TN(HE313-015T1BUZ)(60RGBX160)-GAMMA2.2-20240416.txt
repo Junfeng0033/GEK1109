@@ -1,0 +1,155 @@
+LCD_RESET=1;
+Delay_ms(10);
+LCD_RESET=0;
+Delay_ms(200);
+LCD_RESET=1;
+Delay_ms(120);
+
+//----------------Star Initial Sequence-------//
+LCD_NV3022_CMD(0xff);
+LCD_NV3022_Parameter(0xa5); 
+LCD_NV3022_CMD(0x3a);
+LCD_NV3022_Parameter(0x65);
+LCD_NV3022_CMD(0x51);
+LCD_NV3022_Parameter(0x14); 
+LCD_NV3022_CMD(0x53);
+LCD_NV3022_Parameter(0x11);
+LCD_NV3022_CMD(0x62);//HFP
+LCD_NV3022_Parameter(0x10);
+LCD_NV3022_CMD(0x86);
+LCD_NV3022_Parameter(0x01);//frc_en 01
+LCD_NV3022_CMD(0x87);
+LCD_NV3022_Parameter(0x18);
+LCD_NV3022_CMD(0x88);
+LCD_NV3022_Parameter(0x28);//vcomh 
+LCD_NV3022_CMD(0x89);
+LCD_NV3022_Parameter(0x22);
+LCD_NV3022_CMD(0x61); //HBP
+LCD_NV3022_Parameter(0x10);
+LCD_NV3022_CMD(0x93);
+LCD_NV3022_Parameter(0x12); 
+LCD_NV3022_CMD(0x94);
+LCD_NV3022_Parameter(0x10);
+LCD_NV3022_CMD(0x95);
+LCD_NV3022_Parameter(0x10);
+LCD_NV3022_CMD(0x96);
+LCD_NV3022_Parameter(0x0e);
+LCD_NV3022_CMD(0xb2);
+LCD_NV3022_Parameter(0x0F);
+LCD_NV3022_CMD(0xb4);
+LCD_NV3022_Parameter(0x60);
+LCD_NV3022_CMD(0x91);
+LCD_NV3022_Parameter(0x10);
+LCD_NV3022_CMD(0xC1);
+LCD_NV3022_Parameter(0xF1);
+LCD_NV3022_CMD(0xC5);
+LCD_NV3022_Parameter(0xF8);
+LCD_NV3022_CMD(0xb5);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_CMD(0xc3);
+LCD_NV3022_Parameter(0x11);//ss/gs
+LCD_NV3022_CMD(0x83);
+LCD_NV3022_Parameter(0x13);//
+LCD_NV3022_CMD(0x44);
+LCD_NV3022_Parameter(0x00);
+//////////////////////gamma_set//////////////////////////////////////
+
+LCD_NV3022_CMD(0x2a);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x84);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x84);
+LCD_NV3022_CMD(0x2b);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x1f);
+LCD_NV3022_CMD(0x2c); 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x06);//VPMIDP 15//
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x03);//VRP1 10 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x06);//VRP0 21 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x05);//KP7 0  
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x17);//KP6 1   
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x15);//KP5 2 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x09);//KP4 6 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x08);//KP3 25 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x0F);//KP2 29 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x14);//KP1 30 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x1e);//KP0 31  
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x19);//VPMIDN 15 //
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x19); //VRN0 21 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x1c);//VRN1 10 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x01);//KN0 31 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x06);//KN1 30
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x10);//KN2 29 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x17);//KN3 25 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x16);//KN4 6 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x0a);//KN5 2 
+LCD_NV3022_Parameter(0X00);
+LCD_NV3022_Parameter(0x08);//KN6 1 
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x1a);//KN7 0  
+
+LCD_NV3022_CMD(0xff);
+LCD_NV3022_Parameter(0x00);
+
+LCD_NV3022_CMD(0x11);
+Delay_ms(120);
+LCD_NV3022_CMD(0x3a);
+LCD_NV3022_Parameter(0x55);
+LCD_NV3022_CMD(0x36);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_CMD(0x29);
+Delay_ms(10);
+LCD_NV3022_CMD(0x2A);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x22);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x5D);
+LCD_NV3022_CMD(0x2B);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x00);
+LCD_NV3022_Parameter(0x9F);
+LCD_NV3022_CMD(0x2C);
